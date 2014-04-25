@@ -1,0 +1,22 @@
+<ion-view title="My Chats">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+        <a nav-clear menu-close class="button button-clear button-positive" href="#/app/newchat">New</a>
+    </ion-nav-buttons>
+
+    <ion-content class="has-header" ng-controller="MyChatsCtrl">
+        <ion-list ng-show="chats.length > 0">
+            <ion-item ng-repeat="chat in chats" href="#/app/chats/{{chat.id}}" class="item item-avatar">
+                <img src="img/shout.jpg">
+                <h2>{{chat.title}}</h2>
+                <p>Started by {{chat.createdByAlias}}</p>
+            </ion-item>
+        </ion-list>
+        <div ng-show="chats.length == 0" class="padding">
+            You haven't created any ShoutOuts yet. Tap on 'New' above to create a new ShoutOut.
+        </div>
+    </ion-content>
+</ion-view>

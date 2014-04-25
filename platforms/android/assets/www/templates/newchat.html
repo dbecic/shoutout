@@ -1,0 +1,18 @@
+<ion-view title="New Topic">
+    <ion-content class="has-header" ng-controller="NewChatCtrl">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">Title</span>
+                    <input type="text" ng-model="title" placeholder="Title" required>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Message</span>
+                    <textarea ng-model="post" placeholder="Enter a post to start the topic with.." required></textarea>
+                </label>
+            </div>
+            <div class="padding">
+                <button class="button button-block button-positive" ng-click="newChat()">Create</button>
+                <a class="button button-block button-calm" ng-click="back()">Cancel</a>
+            </div>
+    </ion-content>
+</ion-view>

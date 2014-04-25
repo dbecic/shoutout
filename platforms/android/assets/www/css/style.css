@@ -1,0 +1,38 @@
+/* Empty. Add your own CSS if you like */
+ion-footer-bar.newpost {
+padding:0;
+height:100px;
+}
+ion-footer-bar form {
+width: 100%;
+height:50px;
+padding:0;
+margin:0;
+}
+ion-footer-bar.newpost .list {
+width:100%;
+}
+ion-footer-bar .msg {
+width:100%;
+height:50px;
+margin: 0;
+padding: 0;
+}
+ion-footer-bar .ad {
+width:100%;
+height:50px;
+background-color: black;
+color:white;
+text-align: center;
+margin: 0;
+padding: 0;
+}
+ion-footer-bar .item-input-wrapper {
+background-color: inherit;
+}
+ion-footer-bar .item-input-wrapper ~ .button {
+margin:0;
+}
+.has-footer {
+bottom:100px;
+}

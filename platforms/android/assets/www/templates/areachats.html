@@ -1,0 +1,29 @@
+<ion-view title="ShoutOut">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+        <a nav-clear menu-close class="button button-clear button-positive" href="#/app/newchat">New</a>
+    </ion-nav-buttons>
+
+    <ion-content class="has-header" ng-controller="ChatsCtrl">
+        <ion-refresher
+                pulling-text="Pull to refresh..."
+                on-refresh="findShoutsInMyArea()">
+        </ion-refresher>
+        <ion-list>
+            <ion-item ng-repeat="chat in chats" href="#/app/chats/{{chat.id}}" class="item item-avatar">
+                <img src="img/shout.jpg">
+                <h3 style="display:inline;">{{chat.title}},&nbsp;<h4 style="color: {{chat.color}}; display:inline">{{chat.distance}}</h4></h3>
+                <p>Started by {{chnodat.createdByAlias}}</p>
+            </ion-item>
+            <div ng-show="chats.length == 0" class="padding">
+                No ShoutOuts found in your current geographical area. Please make sure location services are enabled in your device settings.
+            </div>
+            <div ng-show="chats.length == 0" class="padding">
+                Create a new ShoutOut by tapping on 'New' above.
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,26 @@
+<ion-view title="ShoutOut">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+    <ion-content class="has-header" ng-controller="SettingsCtrl">
+            <div class="list">
+                <div class="item item-input item-select">
+                    <div class="input-label">
+                        ShoutOut Radius
+                    </div>
+                    <select ng-model="user.radius" ng-change="updateRadius($event)">
+                        <option value="0.05">50 meters</option>
+                        <option value="0.25">250 meters</option>
+                        <option value="1">1 kilometer</option>
+                        <option value="5">5 kilometers</option>
+                        <option value="25">25 kilometers</option>
+                        <option value="100">100 kilometers</option>
+                        <option value="250">250 kilometers</option>
+                        <option value="500">500 kilometers</option>
+                        <option value="5000">Unlimited</option>
+                    </select>
+                </div>
+            </div>
+    </ion-content>
+</ion-view>

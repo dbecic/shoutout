@@ -1,0 +1,37 @@
+<ion-view title="Chat">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+    <ion-content class="has-header has-footer chatlist" ng-controller="ViewChatCtrl">
+        <ion-list>
+            <ion-item class="card" ng-repeat="post in posts" item="post">
+                <div class="item item-divider">
+                    <h3>{{post.posterAlias}}</h3>
+                    <h5>{{ post.postedDateTime | date : 'short'}}</h5>
+                </div>
+                <div class="item item-text-wrap">
+                    {{post.post}}
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+    <ion-footer-bar class="newpost bar bar-footer bar-stable padding" ng-controller="ViewChatCtrl">
+        <div class="list">
+            <div class="msg item item-input-inset">
+                <label class="item-input-wrapper">
+                    <form ng-submit="newChatPost()">
+                        <textarea type="text" ng-model="newpost" placeholder="Enter a message.." ng-keyup="trySubmit($event)"></textarea>
+                    </form>
+                </label>
+                <button class="button button-small button-calm" ng-click="newChatPost()">
+                    Send
+                </button>
+            </div>
+            <div class="ad item item-input-inset">
+                <label class="text-center">Ad Banner</label>
+            </div>
+        </div>
+    </ion-footer-bar>
+</ion-view>

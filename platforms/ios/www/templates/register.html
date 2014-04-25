@@ -1,0 +1,30 @@
+<ion-view title="ShoutOut">
+
+    <ion-content class="has-header" ng-controller="RegisterCtrl">
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Email</span>
+                <input type="email" ng-model="email" placeholder="Your email address" required>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Alias</span>
+                <input type="text" ng-model="alias" placeholder="Alias" required>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Password</span>
+                <input type="password" ng-model="password" placeholder="Enter your password" required>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Confirm Password</span>
+                <input type="password" ng-model="passwordConfirm" placeholder="Confirm Password" required>
+            </label>
+
+            <div class="padding">
+                <button class="button button-block button-positive"
+                        ng-click="register(user)">Create Account
+                </button>
+            </div>
+        </div>
+    </ion-content>
+
+</ion-view>
